@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterboilerplate/src/models/user.dart';
+import 'package:componentgallery/src/models/user.dart';
 
 
 class Home extends StatefulWidget {

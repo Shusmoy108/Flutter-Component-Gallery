@@ -1,41 +1,42 @@
 import 'package:flutter/material.dart';
 
-class Button extends StatefulWidget {
-  const Button({
+class Button2 extends StatefulWidget {
+  const Button2({
     Key key,
     this.text,
     this.ontap,
-    this.width,
-    this.height,
+    this.radius,
     this.color,
+    this.icon,
     this.fontSize,
     this.fontFamily
 
   });
   final Function ontap;
   final String text,fontFamily;
-  final double height,width,fontSize;
+  final double radius,fontSize;
   final Color color;
+  final IconData icon;
 
 
 
-  State createState() => new ButtonState();
+  State createState() => new ButtonState2();
 }
-class ButtonState extends State<Button> {
+class ButtonState2 extends State<Button2> {
 
   @override
   Widget build(BuildContext context) {
     return  InkWell(
       onTap: () {
         widget.ontap();
-       // _showDialog();
+        // _showDialog();
       },
       child: Container(
-        width: widget.width,
-        height: widget.height,
+        width: widget.radius,
+        height: widget.radius,
         decoration: BoxDecoration(
           color:widget.color,
-          borderRadius: BorderRadius.circular(30.0),
+          borderRadius: BorderRadius.circular(widget.radius),
           boxShadow: [
             //BoxShadow(color: Colors.grey, offset: Offset(1, 2)),
           ],
@@ -44,6 +45,7 @@ class ButtonState extends State<Button> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+//            Icon(widget.icon,size: 15,),
             Text(
               widget.text,
               style: TextStyle(

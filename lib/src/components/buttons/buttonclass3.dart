@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Button extends StatefulWidget {
-  const Button({
+class Button3 extends StatefulWidget {
+  const Button3({
     Key key,
     this.text,
     this.ontap,
-    this.width,
-    this.height,
+    this.size,
     this.color,
     this.fontSize,
     this.fontFamily
@@ -14,28 +13,28 @@ class Button extends StatefulWidget {
   });
   final Function ontap;
   final String text,fontFamily;
-  final double height,width,fontSize;
+  final double size,fontSize;
   final Color color;
 
 
 
-  State createState() => new ButtonState();
+  State createState() => new ButtonState3();
 }
-class ButtonState extends State<Button> {
+class ButtonState3 extends State<Button3> {
 
   @override
   Widget build(BuildContext context) {
     return  InkWell(
       onTap: () {
         widget.ontap();
-       // _showDialog();
+        // _showDialog();
       },
       child: Container(
-        width: widget.width,
-        height: widget.height,
+        width: widget.size,
+        height: widget.size,
         decoration: BoxDecoration(
           color:widget.color,
-          borderRadius: BorderRadius.circular(30.0),
+          borderRadius: BorderRadius.circular(10.0),
           boxShadow: [
             //BoxShadow(color: Colors.grey, offset: Offset(1, 2)),
           ],

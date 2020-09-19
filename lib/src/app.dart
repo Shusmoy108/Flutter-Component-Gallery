@@ -1,6 +1,6 @@
+import 'package:componentgallery/src/pages/home/homepage.dart';
+import 'package:componentgallery/src/pages/login/loginpage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterboilerplate/src/pages/home/homepage.dart';
-import 'package:flutterboilerplate/src/pages/login/loginpage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class App extends StatelessWidget {
@@ -15,6 +15,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter BoilerPlate ',
       debugShowCheckedModeBanner: false,
+     // home: Scaffold() ,
       home: FutureBuilder(
         future: loadAuthData(),
         builder: (context, snapshot) {

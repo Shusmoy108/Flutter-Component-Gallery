@@ -1,6 +1,11 @@
+import 'package:componentgallery/src/components/buttons/buttonclass1.dart';
+import 'package:componentgallery/src/components/buttons/buttonclass2.dart';
+import 'package:componentgallery/src/components/buttons/buttonclass3.dart';
+import 'package:componentgallery/src/components/images/roundedimage.dart';
+import 'package:componentgallery/src/components/modals/dialoguebox.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterboilerplate/src/components/buttons/joinbutton.dart';
-import 'package:flutterboilerplate/src/pages/login/loginpage.dart';
+import 'package:componentgallery/src/components/buttons/joinbutton.dart';
+import 'package:componentgallery/src/pages/login/loginpage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // ignore: must_be_immutable
@@ -104,7 +109,35 @@ class _HomeState extends State<Home> {
             },)
           ],
         ),
-        body:Container(),
+        body:Container(
+          padding: EdgeInsets.all(10),
+          child: ListView(
+            children: <Widget>[
+              Text("Buttons",style: TextStyle(fontSize: 20,fontFamily:'Montserrat', fontWeight: FontWeight.w700),),
+              Divider(thickness: 2,),
+              Row(children: <Widget>[
+                Button(text: 'Button 1',ontap:(){},width: 100,height: 40,fontSize:15,color: Colors.blue,fontFamily:'Montserrat',),
+                SizedBox(width: 5,),
+                Button1(text: 'Button 2',ontap:(){},width: 100,height: 40,fontSize:15,color: Colors.purple,fontFamily:'Montserrat',),
+                SizedBox(width: 5,),
+                Button2(text: 'Button 3',ontap:(){},radius: 100,fontSize:15,color: Colors.amber,fontFamily:'Montserrat',)
+              ],
+              ),
+              Row(
+                children: <Widget>[
+                  Button3(text: 'Button 4',ontap:(){},size: 100,fontSize:15,color: Colors.blueGrey,fontFamily:'Montserrat',),
+
+                ],
+              ),
+              Text("Dialogue Box/Modal",style: TextStyle(fontSize: 20,fontFamily:'Montserrat', fontStyle: FontStyle.italic),),
+              Divider(thickness: 2,),
+              Dialoguebox(),
+              Text("Image",style: TextStyle(fontSize: 20,fontFamily:'Montserrat', fontStyle: FontStyle.italic),),
+              Divider(thickness: 2,),
+              RoundedImage(image: 'images/joker.jpg',)
+            ],
+          ),
+        ),
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.teal,
