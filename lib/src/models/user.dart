@@ -1,5 +1,3 @@
-
-
 class User {
   String key;
   String name;
@@ -9,12 +7,8 @@ class User {
   String email;
   String address;
 
-  User(
-      this.name,
-      this.mobile,
-      this.password,
-      this.gender,
-      this.email, this.address);
+  User(this.name, this.mobile, this.password, this.gender, this.email,
+      this.address);
 
 //  User.fromSnapshot(DataSnapshot snapshot)
 //      : key = snapshot.key,
@@ -38,8 +32,7 @@ class User {
       "password": password,
       "gender": gender,
       "email": email,
-      "address":address,
-
+      "address": address,
     };
   }
 }

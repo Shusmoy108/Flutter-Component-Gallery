@@ -67,7 +67,7 @@ class LoginScreenForm extends State<LoginScreen> {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (BuildContext context) {
-          return Home("as");
+          return Home();
         },
       ),
     );

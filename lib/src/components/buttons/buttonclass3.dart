@@ -1,30 +1,27 @@
 import 'package:flutter/material.dart';
 
 class Button3 extends StatefulWidget {
-  const Button3({
-    Key key,
-    this.text,
-    this.ontap,
-    this.size,
-    this.color,
-    this.fontSize,
-    this.fontFamily
-
-  });
+  const Button3(
+      {Key key,
+      this.text,
+      this.ontap,
+      this.size,
+      this.color,
+      this.fontSize,
+      this.fontFamily})
+      : super(key: key);
   final Function ontap;
-  final String text,fontFamily;
-  final double size,fontSize;
+  final String text, fontFamily;
+  final double size, fontSize;
   final Color color;
-
-
 
   State createState() => new ButtonState3();
 }
-class ButtonState3 extends State<Button3> {
 
+class ButtonState3 extends State<Button3> {
   @override
   Widget build(BuildContext context) {
-    return  InkWell(
+    return InkWell(
       onTap: () {
         widget.ontap();
         // _showDialog();
@@ -33,7 +30,7 @@ class ButtonState3 extends State<Button3> {
         width: widget.size,
         height: widget.size,
         decoration: BoxDecoration(
-          color:widget.color,
+          color: widget.color,
           borderRadius: BorderRadius.circular(10.0),
           boxShadow: [
             //BoxShadow(color: Colors.grey, offset: Offset(1, 2)),
@@ -46,7 +43,9 @@ class ButtonState3 extends State<Button3> {
             Text(
               widget.text,
               style: TextStyle(
-                  color: Colors.white, fontSize: widget.fontSize, fontFamily: widget.fontFamily),
+                  color: Colors.white,
+                  fontSize: widget.fontSize,
+                  fontFamily: widget.fontFamily),
             ),
             SizedBox(
               width: 0.0,

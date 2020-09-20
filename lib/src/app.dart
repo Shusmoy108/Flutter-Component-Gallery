@@ -21,7 +21,7 @@ class App extends StatelessWidget {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             if (snapshot.data) {
-              return Home("");
+              return Home();
             } else {
               return LoginScreen();
             }
