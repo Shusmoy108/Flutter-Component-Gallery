@@ -1,1 +1,23 @@
-# Flutter-Component-Gallery
+# Flutter-Component-Gallery(Feel Free to use. Just give a star if you like the stuffs)
+- You will find some cool flutter components and designed pages here. The list is given below:
+- Buttons:
+   -Capsule Button
+   -Circlue Button
+   -Roundborder Button
+   -Roundborder Square Button
+- Timer
+- Dynamic Checkbox List
+- Progressbar
+- FlipCard
+- Dialogue Box/ Modal
+   - From Top double input dialogue box
+   - From Bottom warning dialogue box
+   - From Right single input dialogue box
+   - From Left success dialogue box
+- Image Style
+   - Rounded Image
+   - Rounded Image with Shadow
+   - Thumbnail Image 
+   - Thumbnail Image with Shadow
+ - Carousel
+ 
