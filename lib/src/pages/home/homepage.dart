@@ -11,6 +11,7 @@ import 'package:componentgallery/src/components/images/avaterimagewithshadow.dar
 import 'package:componentgallery/src/components/images/roundedimage.dart';
 import 'package:componentgallery/src/components/images/thumbnailimage.dart';
 import 'package:componentgallery/src/components/images/thumbnailimagewithshadow.dart';
+import 'package:componentgallery/src/components/listview/horizontalist.dart';
 import 'package:componentgallery/src/components/modals/dialoguebox.dart';
 import 'package:componentgallery/src/components/otp/otppagenew.dart';
 import 'package:componentgallery/src/components/profilecard/profilecard.dart';
@@ -153,6 +154,17 @@ class _HomeState extends State<Home> {
           padding: EdgeInsets.all(10),
           child: ListView(
             children: <Widget>[
+              Text(
+                "Horizontal List",
+                style: TextStyle(
+                    fontSize: 20,
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.w700),
+              ),
+              Divider(
+                thickness: 2,
+              ),
+              HorizontalList(image: ['images/joker.jpg','images/batman.jpg','images/black.jpg','images/batman1.jpg','images/iron.jpg']),
               Text(
                 "Buttons",
                 style: TextStyle(
